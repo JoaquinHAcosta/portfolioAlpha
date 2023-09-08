@@ -54,11 +54,12 @@
         padding: 20px;
         min-height: 150px;
         box-sizing: border-box;
+        resize: none;
     }
 
     .flat-button {
-        color: #F8230F;
-        background: 0 0;
+        color: rgb(252, 252, 252);
+        background: #F8230F;
         font: 11px;
         letter-spacing: 3px;
         text-decoration: none;
@@ -66,5 +67,11 @@
         border: 1px solid #F8230F;
         float: right;
         border-radius: 4px;
+        cursor: pointer;
+
+        &:hover{
+            background: rgb(252, 252, 252);
+            color: #F8230F;
+        }
     }
 }
