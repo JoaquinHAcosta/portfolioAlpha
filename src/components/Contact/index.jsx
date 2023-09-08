@@ -48,9 +48,14 @@ const Contact = () => {
     //         )
     // }
 
-    const sendEmail = (event) => {
-        event.preventDefault()
-        handleSubmit()
+    const sendEmail = async (event) => {
+        event.preventDefault();
+
+        try {
+            await handleSubmit();
+        } catch (error) {
+            console.error('Failed to send the message:', error);
+        }
     }
 
     return(
@@ -97,25 +102,6 @@ const Contact = () => {
                                 </li>
                             </ul>
                         </form>
-                        {/* <form ref={refForm} onSubmit={sendEmail}>
-                            <ul>
-                                <li className='half'>
-                                    <input type="text" name='name' placeholder='Name' required/>
-                                </li>
-                                <li className='half'>
-                                    <input type="email" name='email' placeholder='Email' required/>
-                                </li>
-                                <li>
-                                    <input placeholder='Subject' type='text' name="subject" required/>
-                                </li>
-                                <li>
-                                    <textarea placeholder='Message' name='message' required></textarea>
-                                </li>
-                                <li>
-                                    <input type="submit" className='flat-button' value="SEND" />
-                                </li>
-                            </ul>
-                        </form> */}
                     </div>
                 </div>
             </div>
