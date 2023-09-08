@@ -1,9 +1,9 @@
 .logo-container {
-    z-index: 0;
-    width: 400px;
-    height: 689px;
+    z-index: -1;
+    width: 800px;
+    height: 989px;
     position: absolute;
-    top: 0;
+    top: -10;
     right: 15%;
     bottom: 0;
     left: auto;
@@ -32,5 +32,5 @@
 
 .svg-container{
     stroke: #F8230F;
-    stroke-width: 10px;
+    stroke-width: 60px;
 }
